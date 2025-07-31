@@ -27,7 +27,6 @@ public class square : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("bruh");
         if (collision.gameObject.tag.Equals("Door") && Input.GetKey(KeyCode.E))
         {
             Door component = collision.gameObject.GetComponent<Door>();

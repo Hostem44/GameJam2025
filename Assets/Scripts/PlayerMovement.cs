@@ -91,18 +91,4 @@ public class PlayerMovement : MonoBehaviour
         canDash = true;
     }
 
-    void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag.Equals("Door") && Input.GetKey(KeyCode.E))
-        {
-            Door component = collision.gameObject.GetComponent<Door>();
-            float x = component.TeleportDestination.x;
-            float y = component.TeleportDestination.y;
-            transform.position = new Vector3(
-                transform.position.x + x,
-                transform.position.y + y,
-                transform.position.z
-            );
-        }
-    }
 }

@@ -567,11 +567,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoopLength: 5
+  maxRooms: 10
   Player: {fileID: 2090195245}
-  rooms:
+  mains:
   - {fileID: 7935729949655115259, guid: 2d4532f211da85a4c9c77b0515d854c7, type: 3}
   - {fileID: 5526394810195641340, guid: f7808a9c567892c4ebc68fe5600a000f, type: 3}
+  rooms:
+  - {fileID: 6769587464367603220, guid: 5d08a5e4421e4704d9da1ca817700e33, type: 3}
+  - {fileID: 5526394810195641340, guid: 8ff2c84cf8a876844bf252e4c6ef687c, type: 3}
   dungeon: []
+  other_rooms: []
 --- !u!4 &1330582902
 Transform:
   m_ObjectHideFlags: 0

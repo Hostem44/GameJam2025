@@ -1,11 +1,14 @@
 using UnityEngine;
 
-public class Room : MonoBehaviour
+public class MainRoom : MonoBehaviour
 {
+    public int dungeon_index;
     public GameObject dungeon;
+    public Transform entry_point;
 
     [SerializeField]
     Transform up, down, left, right;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

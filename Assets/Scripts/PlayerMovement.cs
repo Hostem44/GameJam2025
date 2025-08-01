@@ -36,7 +36,6 @@ public class PlayerMovement : MonoBehaviour
             sprite.flipX = false;
         }
 
-
         ProcessInputs();
     }
 
@@ -57,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
         moveDir = new Vector2(moveX, moveY).normalized;
 
-        if (Input.GetKeyDown(KeyCode.Space) && canDash)
+        if (Input.GetKeyDown(KeyCode.Space) && canDash && Mathf.Abs(moveDir.magnitude) > 0)
         {
             StartCoroutine(Dash());
         }

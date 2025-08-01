@@ -570,6 +570,8 @@ MonoBehaviour:
   Player: {fileID: 2090195245}
   rooms:
   - {fileID: 7935729949655115259, guid: 2d4532f211da85a4c9c77b0515d854c7, type: 3}
+  - {fileID: 5526394810195641340, guid: f7808a9c567892c4ebc68fe5600a000f, type: 3}
+  dungeon: []
 --- !u!4 &1330582902
 Transform:
   m_ObjectHideFlags: 0

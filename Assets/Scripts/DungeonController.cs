@@ -24,14 +24,15 @@ public class DungeonController : MonoBehaviour
         for (int i = 0; i < LoopLength; i++)
         {
             int roomNum = Random.Range(0, rooms.Count);
-            GameObject room = (GameObject)Instantiate(rooms[roomNum]);
+            GameObject room = Instantiate(rooms[roomNum]);
             room.transform.position = new Vector3(0, y_offset, 0);
             room.transform.parent = transform;
             room.GetComponent<Room>().dungeon_index = i;
+            room.GetComponent<Room>().dungeon = gameObject;
             
             dungeon[i] = room;
             // Offset new rooms
-            y_offset += 20.0f;
+            y_offset += 200.0f;
         } 
     }
 }

@@ -36,7 +36,6 @@ public class PlayerMovement : MonoBehaviour
             sprite.flipX = false;
         }
 
-
         ProcessInputs();
     }
 
@@ -57,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
         moveDir = new Vector2(moveX, moveY).normalized;
 
-        if (Input.GetKeyDown(KeyCode.Space) && canDash)
+        if (Input.GetKeyDown(KeyCode.Space) && canDash && Mathf.Abs(moveDir.magnitude) > 0)
         {
             StartCoroutine(Dash());
         }
@@ -89,20 +88,5 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isRolling", false);
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
-    }
-
-    void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag.Equals("Door") && Input.GetKey(KeyCode.E))
-        {
-            Door component = collision.gameObject.GetComponent<Door>();
-            float x = component.TeleportDestination.x;
-            float y = component.TeleportDestination.y;
-            transform.position = new Vector3(
-                transform.position.x + x,
-                transform.position.y + y,
-                transform.position.z
-            );
-        }
     }
 }
